@@ -53,8 +53,8 @@ class CrowdDetection:
         ), maskObj1.get_height()), (255, 255, 255), -1)
         cv2.rectangle(frame, (maskObj2.get_x(), maskObj2.get_y()), (maskObj2.get_width(
         ), maskObj2.get_height()), (0, 0, 255), -1)
-        cv2.imshow('image',frame)
-        cv2.imshow('img',self.__mask)
+        #cv2.imshow('image',frame)
+        #cv2.imshow('img',self.__mask)
         if np.any(np.logical_and(frame, self.__mask)):
             return True
         else:
