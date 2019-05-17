@@ -48,6 +48,7 @@ class CrowdDetection:
         self.__mask = np.zeros((self.__height, self.__width, 3), np.uint8)
 
     def getMaskingResult(self, maskObj1, maskObj2):
+        self.__mask = np.zeros((self.__height, self.__width, 3), np.uint8)
         frame = np.zeros((self.__height, self.__width, 3), np.uint8)
         cv2.rectangle(self.__mask, (maskObj1.get_x(), maskObj1.get_y()), (maskObj1.get_x()-maskObj1.get_width(
         ), maskObj1.get_y()-maskObj1.get_height()), (255, 255, 255), -1)
