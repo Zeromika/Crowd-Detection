@@ -144,7 +144,7 @@ for item in detected_objs_details:
         query = connection.execute(db.insert(anomalies_table).values(rule_id = 3,frame_no =item['frame_no'],left_x = union_box[0], top_y = union_box[1], width = union_box[2], height = union_box[3]), params = json.dumps(args) )
         connection.execute(db.insert(video_anomalies_table).values(detected_anomaly_id = query.lastrowid , video_id = vid_id))
     
-    time.sleep(0.1) # Sleep half a second to process data
+    #time.sleep(0.1) # Sleep half a second to process data
     info_function((processed/len(detected_objs_details)*100))
   
 sys.exit(0)
